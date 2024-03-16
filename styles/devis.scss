@@ -1,0 +1,246 @@
+@import "../utils/reset.css";
+@import "../utils/colors.scss";
+
+.page.devis {
+  display: none;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin: 24px auto;
+  position: relative;
+  &.light {
+    color: $text-light-1;
+  }
+  &.dark {
+    color: $bg-dark-4;
+  }
+  header {
+    text-align: center;
+    h2 {
+      color: $orange;
+    }
+    span {
+      color: $orange;
+    }
+  }
+  h3 {
+    padding: 1em 0;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      border: 2px solid $orange;
+      padding: 1em 2em;
+      .field {
+        display: flex;
+        flex-wrap: wrap;
+        span {
+          min-width: 30%;
+        }
+        input {
+          border: none;
+          &.light {
+            background-color: $bg-light-1;
+            color: $text-light-1;
+          }
+          &.dark {
+            background-color: $bg-dark-1;
+            color: $text-dark-1;
+          }
+        }
+        input[type="text"] {
+          flex: 1;
+        }
+        div {
+          flex: 1;
+          min-width: fit-content;
+          input[type="number"] {
+            width: 35px;
+          }
+          .row {
+            display: flex;
+          }
+        }
+      }
+    }
+    input[type="submit"] {
+      margin-left: auto;
+      width: fit-content;
+    }
+  }
+  #btnPrevious {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  button {
+    border: none;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    &:hover {
+      background-color: $orange;
+    }
+    &.light {
+      background-color: $bg-light-1;
+      color: $text-light-1;
+      &:hover {
+        background-color: $orange;
+        color: $text-dark-1;
+      }
+    }
+    &.dark {
+      color: $text-dark-1;
+      background-color: $bg-dark-3;
+      &:hover {
+        background-color: $orange;
+        color: $text-dark-1;
+      }
+    }
+  }
+  input[type="submit"] {
+    border: none;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    &.light {
+      background-color: $bg-light-1;
+      color: $text-light-1;
+      &:hover {
+        background-color: $orange;
+        color: $text-dark-1;
+      }
+    }
+    &.dark {
+      color: $text-dark-1;
+      background-color: $bg-dark-3;
+      &:hover {
+        background-color: $orange;
+        color: $text-dark-1;
+      }
+    }
+  }
+}
+.popup-recap-container {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+
+  .popup-recap {
+    position: fixed;
+    height: 90%;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+    flex-direction: column;
+    &.light {
+      background-color: $bg-light-1;
+      color: $text-light-1;
+    }
+    &.dark {
+      color: $bg-dark-1;
+      background-color: $bg-dark-3;
+    }
+    header {
+      &.light {
+        color: $text-light-1;
+      }
+      &.dark {
+        color: $text-dark-1;
+      }
+    }
+    // footer {
+    //   border-top: 1px solid gainsboro;
+    //   margin-top: 0.5em;
+    // }
+    header,
+    footer {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      text-align: center;
+    }
+    footer {
+      button {
+        border: none;
+        border-radius: 1em;
+        height: fit-content;
+        padding: 0.5em 1em;
+        cursor: pointer;
+
+        &.light {
+          color: $text-light-1;
+        }
+        &.dark {
+          color: $bg-dark-1;
+        }
+        &:hover {
+          background-color: $bg-light-3;
+          color: $text-dark-1;
+        }
+      }
+      button#btnConfirm {
+        background-color: $orange;
+        color: $text-dark-1;
+      }
+    }
+    #recapContainer {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: scroll;
+      .row {
+        display: flex;
+        border-radius: 8px;
+        padding: 1em;
+        margin: 0.5em 1em;
+        gap: 1em;
+        &.light {
+          background-color: $bg-light-2;
+        }
+        &.dark {
+          background-color: $bg-dark-1;
+        }
+        ul {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .page-devis {
+    width: 95%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

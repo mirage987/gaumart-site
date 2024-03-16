@@ -1,0 +1,117 @@
+@import "../utils/reset.css";
+.page.accueil {
+  display: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page.accueil.light {
+  background-color: #cccccc;
+}
+.page.accueil.dark {
+  background-color: #313131;
+}
+.page.accueil .slider-control {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.page.accueil .slider-control .btn-slider-left,
+.page.accueil .slider-control .btn-slider-right {
+  cursor: pointer;
+  background: none;
+  border: none;
+  height: 100%;
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+.page.accueil .slider-control .btn-slider-left:hover + svg {
+  display: block;
+}
+.page.accueil .slider-control .btn-slider-right:hover + svg {
+  display: block;
+}
+.page.accueil .slider-control .btn-slider-group {
+  gap: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.page.accueil .slider-control .btn-slider-group .btn-slider {
+  height: 15px;
+  width: 15px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 0 10px;
+  cursor: pointer;
+}
+.page.accueil .slider-control .btn-slider-group .btn-slider.light {
+  border: 4px solid #ffffff;
+  background-color: #ffffff;
+}
+.page.accueil .slider-control .btn-slider-group .btn-slider.dark {
+  border: 4px solid #1e1e1e;
+  background-color: #1e1e1e;
+}
+.page.accueil .slider-control .btn-slider-group .btn-slider.active {
+  background-color: rgb(223, 85, 27);
+}
+.page.accueil .slider-control .btn-slider-group .btn-slider:hover {
+  scale: 2;
+}
+.page.accueil .img-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: none;
+  transition: background-image 1s ease-in;
+  position: relative;
+}
+.page.accueil .img-container img {
+  border-radius: 12px;
+  margin-left: 400%;
+  display: block;
+  align-self: center;
+  max-height: 95%;
+  max-width: 95%;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  animation-duration: 5s;
+  animation-name: slideIn;
+}
+
+@keyframes slideIn {
+  0% {
+    margin-left: 200%;
+  }
+  15% {
+    margin-left: 0%;
+  }
+  85% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: -200%;
+  }
+}
+.btnArrow {
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.btnArrow.light {
+  stroke: rgb(223, 85, 27);
+}
+.btnArrow.dark {
+  stroke: rgb(223, 85, 27);
+}/*# sourceMappingURL=accueil.css.map */

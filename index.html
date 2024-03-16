@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/accueil.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="stylesheet" href="./styles/devis.css" />
+    <script src="./js/script.js" defer></script>
+    <script src="./js/accueil.js" defer></script>
+    <script src="./js/contact.js" defer></script>
+    <script src="./js/devis.js" defer></script>
+  </head>
+  <body>
+    <header class="header theme light">
+      <img class="logo" src="./imgs/logo_gaumart.png" alt="" />
+      <h1>Gaumart<br /><strong>Traiteur Paris</strong></h1>
+      <span class="btn-toggle-menu" id="btnToggleMenu">
+        <svg
+          class="icon-burger theme light"
+          width="20px"
+          height="20px"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M4 18L20 18"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round" />
+          <path
+            d="M4 12L20 12"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round" />
+          <path
+            d="M4 6L20 6"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round" />
+        </svg>
+      </span>
+      <nav>
+        <ul id="menu"></ul>
+      </nav>
+    </header>
+    <main class="theme light">
+      <div class="page accueil theme light">
+        <div class="img-container"></div>
+        <div class="slider-control">
+          <button class="btn-slider-left theme light" onclick="previousImage()">
+            <svg
+              fill="currentColor"
+              width="50px"
+              height="50px"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                class="light btnArrow"
+                d="M6 12H18M6 12L11 7M6 12L11 17"
+                stroke="currentColor" />
+            </svg>
+          </button>
+          <div class="btn-slider-group"></div>
+          <button class="btn-slider-right theme light" onclick="nextImage()">
+            <svg
+              width="50px"
+              height="50px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                class="btnArrow light"
+                fill="currentColor"
+                d="M6 12H18M18 12L13 7M18 12L13 17"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="page contact">
+        <div class="container">
+          <h2 class="theme light">
+            GAUMART <br />
+            Traiteur et Organisateur de Réception
+          </h2>
+          <p class="theme light">
+            Depuis plus de 25 ans, nous organisons vos cocktails, buffets,
+            réception, ...
+          </p>
+          <p class="theme light">
+            Toutes nos propositions sont pérsonnalisées pour répondre au mieux a
+            vos attentes...
+          </p>
+          <p class="theme light">Tél : 01 45 83 78 78</p>
+          <p class="theme light">Email : <span>gaumart75@orange.fr</span></p>
+          <span class="btn" onclick="showPage('.page.devis')"
+            >> Faire une demande de devis en ligne <</span
+          >
+        </div>
+        <div class="container2">
+          <form action="">
+            <input
+              class="theme light"
+              class="theme light"
+              type="text"
+              placeholder="NOM" />
+            <input
+              class="theme light"
+              class="theme light"
+              type="text"
+              placeholder="SOCIETE*" />
+            <input
+              class="theme light"
+              class="theme light"
+              type="email"
+              placeholder="EMAIL*" />
+            <input
+              class="theme light"
+              class="theme light"
+              type="tel"
+              placeholder="TEL" />
+            <textarea class="theme light" placeholder="MESSAGE*"></textarea>
+            <input
+              class="theme light"
+              class="theme light"
+              type="submit"
+              value="Envoyer" />
+          </form>
+        </div>
+      </div>
+      <div class="page devis theme light">
+        <header>
+          <h2>GAUMART</h2>
+          <p>
+            Tél : 01 45 83 78 78 <br />
+            Email : <span>gaumart75@orange.fr</span>
+          </p>
+        </header>
+        <h3>Demande de devis</h3>
+        <form action="" id="form_devis">
+          <fieldset>
+            <legend>Réception</legend>
+            <div class="field">
+              <span>Type de prestation :</span>
+              <div>
+                <input
+                  type="checkbox"
+                  value="Cocktail apéritif"
+                  id="prestation1" />
+                <label for="prestation1">Cocktail apéritif</label><br />
+                <input
+                  type="checkbox"
+                  value="Cocktail déjeunataire/dinataire"
+                  id="prestation2" />
+                <label for="prestation2">Cocktail déjeunataire/dinataire</label
+                ><br />
+                <input
+                  class="theme light"
+                  type="checkbox"
+                  value="Buffet debout"
+                  id="prestation3" />
+                <label for="prestation3">Buffet debout</label><br />
+                <input
+                  class="theme light"
+                  type="checkbox"
+                  value="Buffet assis"
+                  id="prestation4" />
+                <label for="prestation4">Buffet assis</label><br />
+                <input
+                  type="checkbox"
+                  value="Repas servi à l'assiette"
+                  id="prestation5" />
+                <label for="prestation5">Repas servi à l'assiette</label><br />
+                <input
+                  type="checkbox"
+                  value="Petit déjeuner"
+                  id="prestation6" />
+                <label for="prestation6">Petit déjeuner</label><br />
+                <div class="row">
+                  <label for="prestation7">Autres :</label>
+                  <input class="theme light" type="text" id="prestation7" />
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <span>Lieu de réception :</span>
+              <input class="theme light" type="text" required />
+            </div>
+            <div class="field">
+              <span>Date de réception :</span>
+              <input class="theme light" type="date" required />
+            </div>
+            <div class="field">
+              <span>Heure de début :</span>
+              <div>
+                <input class="theme light" type="time" required />
+              </div>
+            </div>
+            <div class="field">
+              <span>Heure de fin :</span>
+              <div>
+                <input class="theme light" type="time" required />
+              </div>
+            </div>
+            <div class="field">
+              <span>Nombre de convives :</span>
+              <input class="theme light" type="number" min="0" required />
+            </div>
+            <div class="field">
+              <span>Personnels souhaités :</span>
+              <div>
+                <input
+                  class="theme light"
+                  type="radio"
+                  value="Oui"
+                  id="personnel" />
+                <label for="personnel">Oui</label>
+                <input
+                  class="theme light"
+                  type="radio"
+                  value="Non"
+                  id="personne2" />
+                <label for="personne2">Non</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Services</legend>
+            <div class="field">
+              <span>Boissons alcolisées :</span>
+              <div>
+                <input
+                  class="theme light"
+                  type="checkbox"
+                  value="Vin rouge"
+                  id="alcool1" />
+                <label for="alcool1">Vin rouge</label><br />
+                <input
+                  class="theme light"
+                  type="checkbox"
+                  value="Vin blanc"
+                  id="alcool2" />
+                <label for="alcool2">Vin blanc</label><br />
+                <input
+                  class="theme light"
+                  type="checkbox"
+                  value="Vin rosé"
+                  id="alcool3" />
+                <label for="alcool3">Vin rosé</label><br />
+                <input
+                  class="theme light"
+                  type="checkbox"
+                  value="Champagne"
+                  id="alcool4" />
+                <label for="alcool4">Champagne</label><br />
+                <input
+                  class="theme light"
+                  type="checkbox"
+                  value="Crémant"
+                  id="alcool5" />
+                <label for="alcool5">Crémant</label><br />
+                <input
+                  class="theme light"
+                  type="checkbox"
+                  value="Kir"
+                  id="alcool6" />
+                <label for="alcool6">Kir</label><br />
+                <input
+                  class="theme light"
+                  type="checkbox"
+                  value="Alcool fort"
+                  id="alcool7" />
+                <label for="alcool7">Alcool fort</label>
+              </div>
+            </div>
+            <div class="field">
+              <span>Boissons non alcolisées :</span>
+              <div>
+                <input
+                  type="checkbox"
+                  value="Eaux mirerales plate gazeuse"
+                  id="noAlcool1" />
+                <label for="noAlcool1">Eaux mirerales plate gazeuse</label
+                ><br />
+                <input
+                  class="theme light"
+                  type="checkbox"
+                  value="Café"
+                  id="noAlcool2" />
+                <label for="noAlcool2">Café</label><br />
+                <input
+                  type="checkbox"
+                  value="Soft (jus de fruits et sodas)"
+                  id="noAlcool3" />
+                <label for="noAlcool3">Soft (jus de fruits et sodas)</label>
+              </div>
+            </div>
+            <div class="field">
+              <span>Besoins complémentaires :</span>
+              <div>
+                <input
+                  type="checkbox"
+                  value="Matériel jetable"
+                  id="material1" />
+                <label for="material1">Matériel jetable</label><br />
+                <input
+                  type="checkbox"
+                  value="Matériel de reception à louer"
+                  id="material2" />
+                <label for="material2">Matériel de reception à louer</label
+                ><br />
+                <input
+                  type="checkbox"
+                  value="Personnel de service"
+                  id="material3" />
+                <label for="material3">Personnel de service</label><br />
+                <input
+                  type="checkbox"
+                  value="Décoration de buffet"
+                  id="material4" />
+                <label for="material4">Décoration de buffet</label><br />
+                <input
+                  type="checkbox"
+                  value="Décoration floral"
+                  id="material5" />
+                <label for="material5">Décoration floral</label><br />
+                <input
+                  type="checkbox"
+                  value="Centre de table en fleurs fraiches"
+                  id="material6" />
+                <label for="material6">Centre de table en fleurs fraiches</label
+                ><br />
+                <input
+                  class="theme light"
+                  type="checkbox"
+                  value="Nappage"
+                  id="material7" />
+                <label for="material7">Nappage</label><br />
+                <input
+                  type="checkbox"
+                  value="Animation musicale"
+                  id="material8" />
+                <label for="material8">Animation musicale</label><br />
+                <input
+                  type="checkbox"
+                  value="Salles de reception"
+                  id="material9" />
+                <label for="material9">Salles de reception</label><br />
+                <div class="row">
+                  <label for="material10">Autres :</label>
+                  <input class="theme light" type="text" id="material10" />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Votre budget</legend>
+            <div class="field">
+              <span>Budget par personne :</span>
+              <div>
+                <label for="budgetMin">Entre</label>
+                <input
+                  class="theme light"
+                  type="number"
+                  min="0"
+                  id="budgetMin"
+                  required />
+                <label for="budgetMax">et</label>
+                <input
+                  class="theme light"
+                  type="number"
+                  min="0"
+                  id="budgetMax"
+                  required />
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Vos coordonnées</legend>
+            <div class="field">
+              <span for="inputLastname">Nom :</span>
+              <input
+                class="theme light"
+                type="text"
+                name=""
+                id="inputLastname"
+                required /><br />
+            </div>
+            <div class="field">
+              <span for="inputFirstName">Prénom :</span>
+              <input
+                class="theme light"
+                type="text"
+                name=""
+                id="inputFirstName"
+                required /><br />
+            </div>
+            <div class="field">
+              <span for="inputSociety">Société :</span>
+              <input
+                class="theme light"
+                type="text"
+                name=""
+                id="inputSociety"
+                required /><br />
+            </div>
+            <div class="field">
+              <span for="inputAdress">Adresse :</span>
+              <input
+                class="theme light"
+                type="text"
+                name=""
+                id="inputAdress"
+                required /><br />
+            </div>
+            <div class="field">
+              <span for="inputTel">Téléphone :</span>
+              <input
+                class="theme light"
+                type="text"
+                name=""
+                id="inputTel"
+                required /><br />
+            </div>
+            <div class="field">
+              <span for="inputEmail">Email :</span>
+              <input
+                class="theme light"
+                type="text"
+                name=""
+                id="inputEmail"
+                required /><br />
+            </div>
+          </fieldset>
+          <input
+            class="theme light"
+            type="submit"
+            value="Envoyer votre demande de devis"
+            required />
+        </form>
+        <button class="theme light" id="btnPrevious">
+          <span onclick="showPage('.page.contact')">Précedent</span>
+        </button>
+      </div>
+      <div class="popup-recap-container" id="popUpRecap">
+        <div class="popup-recap theme light">
+          <header class="theme light">
+            <h2>Récapitulatif de votre demande de devis</h2>
+          </header>
+          <div id="recapContainer"></div>
+          <footer>
+            <button class="theme light" id="btnCancel">Annuler</button>
+            <button class="theme light" id="btnConfirm">Confirmer</button>
+          </footer>
+        </div>
+      </div>
+    </main>
+    <footer class="theme light">
+      <span id="btnToggleTheme" class="btn-toggle-theme theme light">
+        <span class="theme light">
+          <svg
+            class="icon-sun theme light"
+            id="iconSun"
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11 1C11 0.447715 11.4477 0 12 0C12.5523 0 13 0.447715 13 1V3C13 3.55228 12.5523 4 12 4C11.4477 4 11 3.55228 11 3V1Z" />
+            <circle class="circle" cx="0" cy="0" r="5" />
+
+            <path
+              d="M20.4853 3.51472C20.0947 3.12419 19.4616 3.12419 19.0711 3.51472L17.6568 4.92893C17.2663 5.31946 17.2663 5.95262 17.6568 6.34315C18.0474 6.73367 18.6805 6.73367 19.0711 6.34315L20.4853 4.92893C20.8758 4.53841 20.8758 3.90524 20.4853 3.51472Z" />
+            <path
+              d="M1 13C0.447715 13 0 12.5523 0 12C0 11.4477 0.447715 11 1 11H3C3.55228 11 4 11.4477 4 12C4 12.5523 3.55228 13 3 13H1Z" />
+            <path
+              d="M3.51472 3.51472C3.1242 3.90524 3.1242 4.53841 3.51472 4.92893L4.92894 6.34315C5.31946 6.73367 5.95263 6.73367 6.34315 6.34315C6.73368 5.95262 6.73368 5.31946 6.34315 4.92893L4.92894 3.51472C4.53841 3.12419 3.90525 3.12419 3.51472 3.51472Z" />
+            <path
+              d="M11 21C11 20.4477 11.4477 20 12 20C12.5523 20 13 20.4477 13 21V23C13 23.5523 12.5523 24 12 24C11.4477 24 11 23.5523 11 23V21Z" />
+            <path
+              d="M6.34315 17.6569C5.95263 17.2663 5.31946 17.2663 4.92894 17.6569L3.51473 19.0711C3.1242 19.4616 3.1242 20.0948 3.51473 20.4853C3.90525 20.8758 4.53842 20.8758 4.92894 20.4853L6.34315 19.0711C6.73368 18.6805 6.73368 18.0474 6.34315 17.6569Z" />
+            <path
+              d="M21 13C20.4477 13 20 12.5523 20 12C20 11.4477 20.4477 11 21 11H23C23.5523 11 24 11.4477 24 12C24 12.5523 23.5523 13 23 13H21Z" />
+            <path
+              d="M17.6568 17.6569C17.2663 18.0474 17.2663 18.6805 17.6568 19.0711L19.0711 20.4853C19.4616 20.8758 20.0947 20.8758 20.4853 20.4853C20.8758 20.0948 20.8758 19.4616 20.4853 19.0711L19.0711 17.6569C18.6805 17.2663 18.0474 17.2663 17.6568 17.6569Z" />
+          </svg>
+          <svg
+            class="theme icon-moon"
+            id="iconMoon"
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </span>
+      </span>
+      <p>
+        - GAUMART Traiteur Paris - <br />
+        <a href="">Mentions légales</a> | <a href="">Gateartproject © 2015</a>
+      </p>
+    </footer>
+  </body>
+</html>

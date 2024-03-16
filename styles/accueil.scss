@@ -1,0 +1,125 @@
+@import "../utils/reset.css";
+@import "../utils/colors.scss";
+
+.page.accueil {
+  display: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &.light {
+    background-color: $bg-light-2;
+  }
+  &.dark {
+    background-color: $bg-dark-2;
+  }
+  .slider-control {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    .btn-slider-left,
+    .btn-slider-right {
+      cursor: pointer;
+      background: none;
+      border: none;
+      height: 100%;
+      width: 10%;
+      display: flex;
+      align-items: center;
+    }
+    .btn-slider-left {
+      &:hover + svg {
+        display: block;
+      }
+    }
+    .btn-slider-right {
+      &:hover + svg {
+        display: block;
+      }
+    }
+    .btn-slider-group {
+      gap: 10px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      .btn-slider {
+        height: 15px;
+        width: 15px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.3) 1px 0 10px;
+        cursor: pointer;
+        &.light {
+          border: 4px solid $bg-light-1;
+          background-color: $bg-light-1;
+        }
+        &.dark {
+          border: 4px solid $bg-dark-1;
+          background-color: $bg-dark-1;
+        }
+        &.active {
+          background-color: $orange;
+        }
+        &:hover {
+          scale: 2;
+        }
+      }
+    }
+  }
+  .img-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: none;
+    transition: background-image 1s ease-in;
+    position: relative;
+    img {
+      border-radius: 12px;
+      margin-left: 400%;
+      display: block;
+      align-self: center;
+      max-height: 95%;
+      max-width: 95%;
+      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+      animation-duration: 5s;
+      animation-name: slideIn;
+    }
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    margin-left: 200%;
+  }
+  15% {
+    margin-left: 0%;
+  }
+  85% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: -200%;
+  }
+}
+
+.btnArrow {
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  &.light {
+    stroke: $orange;
+  }
+  &.dark {
+    stroke: $orange;
+  }
+}

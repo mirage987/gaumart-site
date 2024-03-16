@@ -1,0 +1,226 @@
+@import "../utils/reset.css";
+.page.devis {
+  display: none;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin: 24px auto;
+  position: relative;
+}
+.page.devis.light {
+  color: #1e1e1e;
+}
+.page.devis.dark {
+  color: #999999;
+}
+.page.devis header {
+  text-align: center;
+}
+.page.devis header h2 {
+  color: rgb(223, 85, 27);
+}
+.page.devis header span {
+  color: rgb(223, 85, 27);
+}
+.page.devis h3 {
+  padding: 1em 0;
+}
+.page.devis form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.page.devis form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 2px solid rgb(223, 85, 27);
+  padding: 1em 2em;
+}
+.page.devis form fieldset .field {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page.devis form fieldset .field span {
+  min-width: 30%;
+}
+.page.devis form fieldset .field input {
+  border: none;
+}
+.page.devis form fieldset .field input.light {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+.page.devis form fieldset .field input.dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+.page.devis form fieldset .field input[type=text] {
+  flex: 1;
+}
+.page.devis form fieldset .field div {
+  flex: 1;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.page.devis form fieldset .field div input[type=number] {
+  width: 35px;
+}
+.page.devis form fieldset .field div .row {
+  display: flex;
+}
+.page.devis form input[type=submit] {
+  margin-left: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.page.devis #btnPrevious {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.page.devis button {
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.page.devis button:hover {
+  background-color: rgb(223, 85, 27);
+}
+.page.devis button.light {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+.page.devis button.light:hover {
+  background-color: rgb(223, 85, 27);
+  color: #ffffff;
+}
+.page.devis button.dark {
+  color: #ffffff;
+  background-color: #656565;
+}
+.page.devis button.dark:hover {
+  background-color: rgb(223, 85, 27);
+  color: #ffffff;
+}
+.page.devis input[type=submit] {
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.page.devis input[type=submit].light {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+.page.devis input[type=submit].light:hover {
+  background-color: rgb(223, 85, 27);
+  color: #ffffff;
+}
+.page.devis input[type=submit].dark {
+  color: #ffffff;
+  background-color: #656565;
+}
+.page.devis input[type=submit].dark:hover {
+  background-color: rgb(223, 85, 27);
+  color: #ffffff;
+}
+
+.popup-recap-container {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+.popup-recap-container .popup-recap {
+  position: fixed;
+  height: 90%;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 8px;
+  flex-direction: column;
+}
+.popup-recap-container .popup-recap.light {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+.popup-recap-container .popup-recap.dark {
+  color: #1e1e1e;
+  background-color: #656565;
+}
+.popup-recap-container .popup-recap header.light {
+  color: #1e1e1e;
+}
+.popup-recap-container .popup-recap header.dark {
+  color: #ffffff;
+}
+.popup-recap-container .popup-recap header,
+.popup-recap-container .popup-recap footer {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  text-align: center;
+}
+.popup-recap-container .popup-recap footer button {
+  border: none;
+  border-radius: 1em;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.popup-recap-container .popup-recap footer button.light {
+  color: #1e1e1e;
+}
+.popup-recap-container .popup-recap footer button.dark {
+  color: #1e1e1e;
+}
+.popup-recap-container .popup-recap footer button:hover {
+  background-color: #999999;
+  color: #ffffff;
+}
+.popup-recap-container .popup-recap footer button#btnConfirm {
+  background-color: rgb(223, 85, 27);
+  color: #ffffff;
+}
+.popup-recap-container .popup-recap #recapContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+.popup-recap-container .popup-recap #recapContainer .row {
+  display: flex;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 0.5em 1em;
+  gap: 1em;
+}
+.popup-recap-container .popup-recap #recapContainer .row.light {
+  background-color: #cccccc;
+}
+.popup-recap-container .popup-recap #recapContainer .row.dark {
+  background-color: #1e1e1e;
+}
+.popup-recap-container .popup-recap #recapContainer .row ul {
+  flex: 1;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .page-devis {
+    width: 95%;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) *//*# sourceMappingURL=devis.css.map */

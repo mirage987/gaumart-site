@@ -1,0 +1,115 @@
+@import "../utils/reset.css";
+.page.contact {
+  display: none;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.page.contact .container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  gap: 1em;
+  height: 500px;
+  width: 500px;
+}
+.page.contact .container h2 {
+  font-size: xx-large;
+}
+.page.contact .container h2.light {
+  color: #1e1e1e;
+}
+.page.contact .container h2.dark {
+  color: #ffffff;
+}
+.page.contact .container p {
+  width: 90%;
+}
+.page.contact .container p.light {
+  color: #1e1e1e;
+}
+.page.contact .container p.dark {
+  color: #ffffff;
+}
+.page.contact .container p span.light {
+  color: #1e1e1e;
+}
+.page.contact .container p span.dark {
+  color: #ffffff;
+}
+.page.contact .container span.btn {
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(223, 85, 27);
+}
+.page.contact .container2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1em;
+  gap: 1em;
+  height: 500px;
+  width: 500px;
+}
+.page.contact .container2 form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
+}
+.page.contact .container2 form textarea {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  height: 200px;
+}
+.page.contact .container2 form textarea.light {
+  background-color: #ffffff;
+}
+.page.contact .container2 form textarea.dark {
+  background-color: #1e1e1e;
+  color: #999999;
+}
+.page.contact .container2 form input {
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+.page.contact .container2 form input.light {
+  background-color: #ffffff;
+}
+.page.contact .container2 form input.dark {
+  background-color: #1e1e1e;
+  color: #999999;
+}
+.page.contact .container2 form input[type=submit] {
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.page.contact .container2 form input[type=submit].light {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+.page.contact .container2 form input[type=submit].dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+.page.contact .container2 form input[type=submit]:hover {
+  background-color: rgb(223, 85, 27);
+  color: #ffffff;
+}/*# sourceMappingURL=contact.css.map */
